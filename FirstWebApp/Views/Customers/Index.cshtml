@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Customers List</h2>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Customer</th>
+            <th>Membership</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{ foreach (var item in ViewBag.customersList)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.MembershipType.MembershipTitle</td>
+                </tr>
+            }}
+    </tbody>
+</table>

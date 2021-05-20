@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Movies Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Movies</h2>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Movie</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{ foreach (var item in ViewBag.movies)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                </tr>
+            }}
+    </tbody>
+</table>
+
+
+
