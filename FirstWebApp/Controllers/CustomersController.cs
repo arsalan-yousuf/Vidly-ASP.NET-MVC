@@ -47,5 +47,10 @@ namespace FirstWebApp.Controllers
             ViewBag.customerDetails = customer;
             return View();
         }
+
+        public ActionResult New()
+        {
+            return View();
+        }
     }
 }
