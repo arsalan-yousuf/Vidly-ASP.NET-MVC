@@ -88,3 +88,8 @@ C:\Users\Arsalan\source\repos\FirstWebApp\FirstWebApp\obj\Debug\FirstWebApp.Migr
 C:\Users\Arsalan\source\repos\FirstWebApp\FirstWebApp\obj\Debug\FirstWebApp.Migrations.PopulateMembershipTypes.resources
 C:\Users\Arsalan\source\repos\FirstWebApp\FirstWebApp\obj\Debug\FirstWebApp.Migrations.ApplyAnnotationToCustomerName.resources
 C:\Users\Arsalan\source\repos\FirstWebApp\FirstWebApp\obj\Debug\FirstWebApp.Migrations.AddMembershipTitleAndUpdateRecords.resources
+C:\Users\Arsalan\source\repos\FirstWebApp\FirstWebApp\obj\Debug\FirstWebApp.Migrations.AddBirthDateToCustomer.resources
+C:\Users\Arsalan\source\repos\FirstWebApp\FirstWebApp\obj\Debug\FirstWebApp.Migrations.NullableBirthDate.resources
+C:\Users\Arsalan\source\repos\FirstWebApp\FirstWebApp\obj\Debug\FirstWebApp.Migrations.AddGenre.resources
+C:\Users\Arsalan\source\repos\FirstWebApp\FirstWebApp\obj\Debug\FirstWebApp.Migrations.PopulateGenre.resources
+C:\Users\Arsalan\source\repos\FirstWebApp\FirstWebApp\obj\Debug\FirstWebApp.Migrations.UpdateMovies.resources

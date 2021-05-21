@@ -16,6 +16,7 @@ namespace FirstWebApp.Models
         public MembershipType MembershipType { get; set; }
         public int MembershipTypeId { get; set; }
         //above convention is followed as to store MembershipTypeId as forigen key 
+        public DateTime? BirthDate { get; set; }
 
     }
 }

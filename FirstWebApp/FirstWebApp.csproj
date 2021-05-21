@@ -157,8 +157,29 @@
     <Compile Include="Migrations\202105181925316_AddMembershipTitleAndUpdateRecords.designer.cs">
       <DependentUpon>202105181925316_AddMembershipTitleAndUpdateRecords.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105201456269_AddBirthDateToCustomer.cs" />
+    <Compile Include="Migrations\202105201456269_AddBirthDateToCustomer.designer.cs">
+      <DependentUpon>202105201456269_AddBirthDateToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105201523128_NullableBirthDate.cs" />
+    <Compile Include="Migrations\202105201523128_NullableBirthDate.designer.cs">
+      <DependentUpon>202105201523128_NullableBirthDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105201950431_AddGenre.cs" />
+    <Compile Include="Migrations\202105201950431_AddGenre.designer.cs">
+      <DependentUpon>202105201950431_AddGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105202017035_PopulateGenre.cs" />
+    <Compile Include="Migrations\202105202017035_PopulateGenre.designer.cs">
+      <DependentUpon>202105202017035_PopulateGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105211842515_UpdateMovies.cs" />
+    <Compile Include="Migrations\202105211842515_UpdateMovies.designer.cs">
+      <DependentUpon>202105211842515_UpdateMovies.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Models\MyDBContext.cs" />
@@ -207,6 +228,8 @@
     <Content Include="Views\Shared\_Navbar.cshtml" />
     <Content Include="Views\Movies\Index.cshtml" />
     <Content Include="Views\Customers\Index.cshtml" />
+    <Content Include="Views\Customers\Details.cshtml" />
+    <Content Include="Views\Movies\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -242,6 +265,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105181925316_AddMembershipTitleAndUpdateRecords.resx">
       <DependentUpon>202105181925316_AddMembershipTitleAndUpdateRecords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105201456269_AddBirthDateToCustomer.resx">
+      <DependentUpon>202105201456269_AddBirthDateToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105201523128_NullableBirthDate.resx">
+      <DependentUpon>202105201523128_NullableBirthDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105201950431_AddGenre.resx">
+      <DependentUpon>202105201950431_AddGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105202017035_PopulateGenre.resx">
+      <DependentUpon>202105202017035_PopulateGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105211842515_UpdateMovies.resx">
+      <DependentUpon>202105211842515_UpdateMovies.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.customerDetails.Name</h2>
+<ul>
+    <li>Membership Type: @ViewBag.customerDetails.MembershipType.MembershipTitle</li>
+    @if(ViewBag.customerDetails.BirthDate != null)
+            {
+                <li>Date of Birth: @ViewBag.customerDetails.BirthDate</li>
+            }
+</ul>
+

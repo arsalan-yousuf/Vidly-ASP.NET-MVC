@@ -5,11 +5,21 @@ using System.Web;
 using System.Web.Mvc;
 using FirstWebApp.Models;
 using FirstWebApp.ViewModels;
+using System.Data.Entity;
 
 namespace FirstWebApp.Controllers
 {
     public class MoviesController : Controller
     {
+        private MyDBContext _context;
+        public MoviesController()
+        {
+            _context = new MyDBContext();
+        }
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
 
         //public ActionResult Index()
         //{
@@ -69,17 +79,29 @@ namespace FirstWebApp.Controllers
                 sortBy = "Name";
             }
 
-            var movies = new List<Movie>
-            {
-                new Movie { Name="Shrek"},
-                new Movie {Name="Pink Panther"},
-                new Movie {Name="Spider Man"},
-                new Movie {Name="Iron Man"}
-            };
+            //var movies = new List<Movie>
+            //{
+            //    new Movie { Name="Shrek"},
+            //    new Movie {Name="Pink Panther"},
+            //    new Movie {Name="Spider Man"},
+            //    new Movie {Name="Iron Man"}
+            //};
 
+            var movies = _context.Movies.Include(c => c.Genre).ToList();
             ViewBag.movies = movies;
             return View();
             //return Content(String.Format("PageIndex: {0}, SortBy: {1}", pageIndex, sortBy));
+        }
+
+        public ActionResult Details(int id)
+        {
+            var movie = _context.Movies.Include(c => c.Genre).SingleOrDefault(c => c.Id == id);
+            if (movie == null)
+            {
+                return HttpNotFound();
+            }
+            ViewBag.movieDetails = movie;
+            return View();
         }
 
         [Route("movies/released/{year}/{month:regex(\\d{2}):range(1,12)}")]
