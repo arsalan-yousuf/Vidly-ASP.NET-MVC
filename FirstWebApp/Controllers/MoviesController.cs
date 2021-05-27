@@ -60,12 +60,6 @@ namespace FirstWebApp.Controllers
             //return RedirectToAction("Index", "Home", new { page = 1, sortBy = "name" });
 
         }
-        
-        // GET: movies/edit/1
-        public ActionResult Edit(int id)
-        {
-            return Content("ID = " + id); 
-        }
 
         //GET: movies
         public ActionResult Index(int? pageIndex, string sortBy)
@@ -102,6 +96,27 @@ namespace FirstWebApp.Controllers
             }
             ViewBag.movieDetails = movie;
             return View();
+        }
+
+        public ActionResult New()
+        {
+            ViewBag.genres = _context.Genres.ToList();
+
+            return View();
+        }
+
+        public ActionResult Create(Movie movie)
+        {
+            _context.Movies.Add(movie);
+            _context.SaveChanges();
+            return RedirectToAction("Index", "Movies");
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var movie = _context.Movies.Single(c => c.Id == id);
+            ViewBag.genres = _context.Genres.ToList();
+            return View("New", movie);
         }
 
         [Route("movies/released/{year}/{month:regex(\\d{2}):range(1,12)}")]
