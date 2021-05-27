@@ -50,7 +50,38 @@ namespace FirstWebApp.Controllers
 
         public ActionResult New()
         {
+            var membershipTypes = _context.MembershipTypes.ToList();
+            ViewBag.membershipTypes = membershipTypes;
             return View();
+        }
+
+        public ActionResult Edit(int id)
+        {
+            var customer = _context.Customers.SingleOrDefault(c => c.Id == id);
+            if (customer == null)
+                return HttpNotFound();
+            ViewBag.membershipTypes = _context.MembershipTypes.ToList();
+            return View("New", customer);
+        }
+
+        [HttpPost]
+        public ActionResult Create(Customer customer)
+        {
+            if(customer.Id == 0)
+            {
+                _context.Customers.Add(customer);
+            }
+            else
+            {
+                var custInDb = _context.Customers.Single(c => c.Id == customer.Id);
+                custInDb.Name = customer.Name;
+                custInDb.BirthDate = customer.BirthDate;
+                custInDb.MembershipTypeId = customer.MembershipTypeId;
+                custInDb.IsSubscribedToNewsLetter = customer.IsSubscribedToNewsLetter;
+            }
+            _context.SaveChanges();
+
+            return RedirectToAction("Index", "Customers");
         }
     }
 }

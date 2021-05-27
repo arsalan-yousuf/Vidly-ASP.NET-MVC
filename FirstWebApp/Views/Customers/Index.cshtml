@@ -17,7 +17,7 @@
         @{ foreach (var item in ViewBag.customersList)
             {
                 <tr>
-                    <td>@Html.ActionLink((string)item.Name, "Details", "Customers", new { id = item.Id }, null)</td>
+                    <td>@Html.ActionLink((string)item.Name, "Edit", "Customers", new { id = item.Id }, null)</td>
                     <td>@item.MembershipType.MembershipTitle</td>
                 </tr>
             }}

@@ -14,8 +14,10 @@ namespace FirstWebApp.Models
         public string Name { get; set; }
         public bool IsSubscribedToNewsLetter { get; set; }
         public MembershipType MembershipType { get; set; }
+        [Display(Name = "Membership Type")]
         public int MembershipTypeId { get; set; }
         //above convention is followed as to store MembershipTypeId as forigen key 
+        [Display(Name = "Date of Birth")]       //just for displaying it in form as Date of Birth
         public DateTime? BirthDate { get; set; }
 
     }
