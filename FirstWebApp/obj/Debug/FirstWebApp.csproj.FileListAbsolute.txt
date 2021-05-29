@@ -93,3 +93,5 @@ C:\Users\Arsalan\source\repos\FirstWebApp\FirstWebApp\obj\Debug\FirstWebApp.Migr
 C:\Users\Arsalan\source\repos\FirstWebApp\FirstWebApp\obj\Debug\FirstWebApp.Migrations.AddGenre.resources
 C:\Users\Arsalan\source\repos\FirstWebApp\FirstWebApp\obj\Debug\FirstWebApp.Migrations.PopulateGenre.resources
 C:\Users\Arsalan\source\repos\FirstWebApp\FirstWebApp\obj\Debug\FirstWebApp.Migrations.UpdateMovies.resources
+C:\Users\Arsalan\source\repos\FirstWebApp\FirstWebApp\obj\Debug\FirstWebApp.Migrations.AddedValidationInCustomersAndMovies.resources
+C:\Users\Arsalan\source\repos\FirstWebApp\FirstWebApp\obj\Debug\FirstWebApp.Migrations.NullableMovieReleaseDate.resources

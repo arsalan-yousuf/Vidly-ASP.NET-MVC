@@ -15,5 +15,8 @@ namespace FirstWebApp.Models
         [Required]
         [StringLength(255)]
         public string MembershipTitle { get; set; }
+
+        public static readonly int Unknown = 0;
+        public static readonly int PayAsYouGo = 1;
     }
 }

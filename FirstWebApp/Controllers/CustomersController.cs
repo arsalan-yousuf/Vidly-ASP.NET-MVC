@@ -52,7 +52,7 @@ namespace FirstWebApp.Controllers
         {
             var membershipTypes = _context.MembershipTypes.ToList();
             ViewBag.membershipTypes = membershipTypes;
-            return View();
+            return View(new Customer());
         }
 
         public ActionResult Edit(int id)
@@ -65,8 +65,15 @@ namespace FirstWebApp.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(Customer customer)
         {
+            if (!ModelState.IsValid)
+            {
+                ViewBag.membershipTypes = _context.MembershipTypes.ToList();
+                return View("New", customer);
+            }
+
             if(customer.Id == 0)
             {
                 _context.Customers.Add(customer);

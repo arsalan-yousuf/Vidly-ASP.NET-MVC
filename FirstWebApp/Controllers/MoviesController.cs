@@ -102,12 +102,32 @@ namespace FirstWebApp.Controllers
         {
             ViewBag.genres = _context.Genres.ToList();
 
-            return View();
+            return View(new Movie());
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Create(Movie movie)
         {
-            _context.Movies.Add(movie);
+            if (!ModelState.IsValid)
+            {
+                ViewBag.genres = _context.Genres.ToList();
+                return View("New", movie);
+            }
+
+            if(movie.Id == 0)
+            {
+                movie.DateAdded = DateTime.Now;
+                _context.Movies.Add(movie);
+            }
+            else
+            {
+                var movieInDb = _context.Movies.Single(c => c.Id == movie.Id);
+                movieInDb.Name = movie.Name;
+                movieInDb.ReleaseDate = movie.ReleaseDate;
+                movieInDb.GenreId = movie.GenreId;
+                movieInDb.Stock = movie.Stock;
+            }
             _context.SaveChanges();
             return RedirectToAction("Index", "Movies");
         }

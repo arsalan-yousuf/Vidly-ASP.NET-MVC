@@ -177,12 +177,21 @@
     <Compile Include="Migrations\202105211842515_UpdateMovies.designer.cs">
       <DependentUpon>202105211842515_UpdateMovies.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105281354204_AddedValidationInCustomersAndMovies.cs" />
+    <Compile Include="Migrations\202105281354204_AddedValidationInCustomersAndMovies.designer.cs">
+      <DependentUpon>202105281354204_AddedValidationInCustomersAndMovies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105281758523_NullableMovieReleaseDate.cs" />
+    <Compile Include="Migrations\202105281758523_NullableMovieReleaseDate.designer.cs">
+      <DependentUpon>202105281758523_NullableMovieReleaseDate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Models\MyDBContext.cs" />
+    <Compile Include="Models\ValidateIs18YearsOld.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\RandomMovieViewModel.cs" />
   </ItemGroup>
@@ -282,6 +291,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105211842515_UpdateMovies.resx">
       <DependentUpon>202105211842515_UpdateMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105281354204_AddedValidationInCustomersAndMovies.resx">
+      <DependentUpon>202105281354204_AddedValidationInCustomersAndMovies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105281758523_NullableMovieReleaseDate.resx">
+      <DependentUpon>202105281758523_NullableMovieReleaseDate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

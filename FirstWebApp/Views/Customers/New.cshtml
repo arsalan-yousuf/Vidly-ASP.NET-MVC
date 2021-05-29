@@ -8,17 +8,21 @@
 
 @using (Html.BeginForm("Create", "Customers"))      //"Create" -> Action to called on submit, "Customers" -> Controller
 {
+    @Html.ValidationSummary()
     <div class="form-group">
         @Html.LabelFor(m => m.Name)
         @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Name)
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.BirthDate)
         @Html.TextBoxFor(m => m.BirthDate, "{0:d MMM yyyy}", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.BirthDate)
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.MembershipTypeId)
         @Html.DropDownListFor(m => m.MembershipTypeId, new SelectList(ViewBag.membershipTypes, "Id", "MembershipTitle"), "Select Membership Type", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.MembershipTypeId)
     </div>
     <div class="checkbox">
         <label>
@@ -26,7 +30,15 @@
         </label>
     </div>
     @Html.HiddenFor(m => m.Id)
+    //below line will generate a token and save it as cookie
+    @Html.AntiForgeryToken()
     <button type="submit" class="btn btn-primary">Save</button>
+}
+
+@*following code is added for validation at client side*@
+@section scripts
+    {
+    @Scripts.Render("~/bundles/jqueryval")
 }
 
 
