@@ -95,3 +95,13 @@ C:\Users\Arsalan\source\repos\FirstWebApp\FirstWebApp\obj\Debug\FirstWebApp.Migr
 C:\Users\Arsalan\source\repos\FirstWebApp\FirstWebApp\obj\Debug\FirstWebApp.Migrations.UpdateMovies.resources
 C:\Users\Arsalan\source\repos\FirstWebApp\FirstWebApp\obj\Debug\FirstWebApp.Migrations.AddedValidationInCustomersAndMovies.resources
 C:\Users\Arsalan\source\repos\FirstWebApp\FirstWebApp\obj\Debug\FirstWebApp.Migrations.NullableMovieReleaseDate.resources
+C:\Users\Arsalan\source\repos\FirstWebApp\FirstWebApp\bin\System.Net.Http.Formatting.dll
+C:\Users\Arsalan\source\repos\FirstWebApp\FirstWebApp\bin\System.Web.Http.dll
+C:\Users\Arsalan\source\repos\FirstWebApp\FirstWebApp\bin\System.Web.Http.SelfHost.dll
+C:\Users\Arsalan\source\repos\FirstWebApp\FirstWebApp\bin\System.Web.Http.WebHost.dll
+C:\Users\Arsalan\source\repos\FirstWebApp\FirstWebApp\bin\System.Net.Http.Formatting.xml
+C:\Users\Arsalan\source\repos\FirstWebApp\FirstWebApp\bin\System.Web.Http.xml
+C:\Users\Arsalan\source\repos\FirstWebApp\FirstWebApp\bin\System.Web.Http.SelfHost.xml
+C:\Users\Arsalan\source\repos\FirstWebApp\FirstWebApp\bin\System.Web.Http.WebHost.xml
+C:\Users\Arsalan\source\repos\FirstWebApp\FirstWebApp\bin\AutoMapper.dll
+C:\Users\Arsalan\source\repos\FirstWebApp\FirstWebApp\bin\AutoMapper.xml
