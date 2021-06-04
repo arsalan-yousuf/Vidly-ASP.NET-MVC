@@ -12,13 +12,18 @@ namespace FirstWebApp.App_Start
     {
         public MappingProfile()
         {
+            //Domain to Dto
             Mapper.CreateMap<Customer, CustomerDto>();
+            Mapper.CreateMap<Movie, MovieDto>();
+            Mapper.CreateMap<MembershipType, MembershipTypeDto>();
+            
+
+            //Dto to Domain
             Mapper.CreateMap<CustomerDto, Customer>()
                 .ForMember(dest => dest.Id, act => act.Ignore());
-
-            Mapper.CreateMap<Movie, MovieDto>();
             Mapper.CreateMap<MovieDto, Movie>()
                 .ForMember(dest => dest.Id, act => act.Ignore());
+            Mapper.CreateMap<MembershipTypeDto, MembershipType>();
         }
     }
 }

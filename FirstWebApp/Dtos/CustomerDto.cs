@@ -18,7 +18,8 @@ namespace FirstWebApp.Dtos
         public bool IsSubscribedToNewsLetter { get; set; }
 
         [Required]
-        public int MembershipTypeId { get; set; }
+        public int MembershipTypeId { get; set; }   
+        public MembershipTypeDto MembershipType { get; set; }
 
         //[ValidateIs18YearsOld]
         public DateTime? BirthDate { get; set; }
