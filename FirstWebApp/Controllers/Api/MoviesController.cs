@@ -7,6 +7,7 @@ using System.Web.Http;
 using FirstWebApp.Models;
 using FirstWebApp.Dtos;
 using AutoMapper;
+using System.Data.Entity;
 
 namespace FirstWebApp.Controllers.Api
 {
@@ -21,7 +22,7 @@ namespace FirstWebApp.Controllers.Api
         //GET /api/movies
         public IHttpActionResult GetMovies()
         {
-            return Ok(_context.Movies.ToList().Select(Mapper.Map<Movie, MovieDto>));
+            return Ok(_context.Movies.Include(c => c.Genre).ToList().Select(Mapper.Map<Movie, MovieDto>));
         }
 
         //GET /api/movies/1

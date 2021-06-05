@@ -16,6 +16,7 @@ namespace FirstWebApp.App_Start
             Mapper.CreateMap<Customer, CustomerDto>();
             Mapper.CreateMap<Movie, MovieDto>();
             Mapper.CreateMap<MembershipType, MembershipTypeDto>();
+            Mapper.CreateMap<Genre, GenreDto>();
             
 
             //Dto to Domain
@@ -24,6 +25,7 @@ namespace FirstWebApp.App_Start
             Mapper.CreateMap<MovieDto, Movie>()
                 .ForMember(dest => dest.Id, act => act.Ignore());
             Mapper.CreateMap<MembershipTypeDto, MembershipType>();
+            Mapper.CreateMap<GenreDto, Genre>();
         }
     }
 }
